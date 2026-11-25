@@ -1,0 +1,45 @@
+# Node / Next.js
+node_modules/
+frontend/node_modules/
+.next/
+frontend/.next/
+out/
+build/
+dist/
+
+# Python
+venv/
+.venv/
+env/
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*/*/*/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Testing & Logs
+.playwright-mcp/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Vercel & IDE
+.vercel/
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment variables
+.env.local
+.env.*.local
+
+# Temporary uploads (keep directory, exclude files if needed)
+uploads/timetables/*
+!uploads/timetables/.gitkeep
