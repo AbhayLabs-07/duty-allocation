@@ -13,7 +13,7 @@ router = APIRouter()
 @router.get("/generate")
 def get_report_data(
     report_type: str = Query(..., description="1 to 8 or report identifier"),
-    format: str = Query("json", regex="^(json|excel|pdf|html)$"),
+    format: str = Query("json", pattern="^(json|excel|pdf|html)$"),
     shift_id: Optional[int] = None,
     department_id: Optional[int] = None,
     db: Session = Depends(get_db)

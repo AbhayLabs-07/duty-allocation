@@ -43,3 +43,6 @@ yarn-error.log*
 # Temporary uploads (keep directory, exclude files if needed)
 uploads/timetables/*
 !uploads/timetables/.gitkeep
+
+.vercel
+.env*
