@@ -11,10 +11,15 @@ from app.models.timetable import AcademicCodeMapping, TimetableUpload, Timetable
 from app.models.examination import Examination, ExaminationDate, ExaminationShift, ExaminationRoom
 from app.services.timetable_parser import TimetableParser
 
+from app.core.config import settings
+
 router = APIRouter()
 
-UPLOAD_DIR = os.path.join(os.getcwd(), "uploads", "timetables")
-os.makedirs(UPLOAD_DIR, exist_ok=True)
+UPLOAD_DIR = os.path.join(settings.UPLOAD_DIR, "timetables")
+try:
+    os.makedirs(UPLOAD_DIR, exist_ok=True)
+except Exception:
+    pass
 
 # Pydantic Schemas
 class CodeMappingCreate(BaseModel):
